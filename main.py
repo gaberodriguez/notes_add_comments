@@ -81,9 +81,6 @@ class MainPage(Handler):
 
         posts = posts_query.fetch()
 
-        #comment = self.request.get('comment')
-        #name = self.request.get('name')
-
         posts_html = ''
         for post in posts:
             posts_html += '<div><h3>' + '</h3>wrote: <blockquote>' + cgi.escape(post.content) + '</blockquote\n'
