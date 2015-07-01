@@ -1,0 +1,234 @@
+{% extends "base.html" %}
+
+<body>
+{% block content %}
+	<h1 id="section-2">
+		Stage 2: Telling Computers What to Do
+	</h1>
+	<div class="lesson">
+		<h2 id="lesson-1">
+			Lesson 1: Introduction to "Serious" Programming
+		</h2>
+		<div class="concept">
+			<div class="concept-title" id="lesson-1-1">
+				<b>Computer</b>
+			</div>
+			<div class="concept-description">
+				<p>
+					All machines are designed to do things, weather that be something simple like a toaster which is limited to only doing a few things, or like a computer which can do many things. Computers are on a whole other level than a toaster.<br> A computer can be <b>Programmed</b> to do anything we want, as long as we can write a program that specifies a specific sequence of instructions.
+				</p>
+			</div>
+		</div>
+		<div class="concept">
+			<div class="concept-title" id="lesson-1-2">
+				<b>Computer Program</b>
+			</div>
+			<div class="concept-description">
+				<p>
+					A sequence of precise instructions that a computer can follow to produce an output. Search engines, video games, calculators are some examples of computer programs.
+				</p>
+			</div>
+		</div>
+		<div class="concept">
+			<div class="concept-title" id="lesson-1-3">
+				<b>Programming Language</b>
+			</div>
+			<div class="concept-description">
+				<p>
+					A programming language is what programmers use to tell a computer what to do. Python, C++, and HTML are some programming Languages.
+				</p>
+			</div>
+		</div>
+	    <div class="concept">
+	      <div class="concept-title" id="lesson-1-4">
+	        <b>Python</b>
+	      </div>
+	      <div class="concept-description">
+	        <p>
+	          Python is a programming language. When you use Python code and execute the code, a <em>Python Interpreter</em> converts the code you wrote as a set of instructions that the computer can understand and execute.
+	        </p>
+	      </div>
+	    </div>
+	    <div class="concept">
+	      <div class="concept-title" id="lesson-1-5">
+	        <b>Grammar</b>
+	      </div>
+	      <div class="concept-description">
+	        <p>
+	          Just like we have different languages in the world and those separate languages have rules. So does programming language. Computers are quite literal they can not guess to finish our sentences or understand what we mean by only a piece of an instruction. We have to include everything the computer needs to do exactly what we want the machine to do.
+	        </p>
+	      </div>
+	    </div>
+	    <div class="concept">
+	      <div class="concept-title" id="lesson-1-6">
+	        <b>Python Expressions</b>
+	      </div>
+	      <div class="concept-description">
+	        <p>
+	          A Python "expression" is a valid Python statement. For example: print 1 + 1 is a valid expression, but print 1 + (without a number at the end) is not. As humans we could comprehend if someone wrote 1 + 1 + that this is 2 because there is nothing else to add on the other hand the Python Interpreter would not be able to run this bec
+	        </p>
+	      </div>
+	    </div>
+	  </div>
+	  <br>
+		<br>
+	  <div class="lesson">
+	    <h2 id="lesson-2">
+	      Lesson 2: Variables and Strings
+	    </h2>
+	    <div class="concept">
+	      <div class="concept-title" id="lesson-2-1">
+	        <b>Variables</b>
+	      </div>
+	      <div class="concept-description">
+	        <p>
+	          <ol>
+	            <li>What is a <b>variable?</b></li>
+	            <li>What does it mean to assign a value to a variable?</li>
+	            <li>What is the difference between what the equals "=" means in math versus in programming. What's the difference between this:<em> 2 + 3 = 5</em> and this: <em>my_varible = 5 </em>?</li>
+	          </ol>
+	          <br>
+	          Assignment Statements: <b>Name</b>= <b>Expression</b>. So we can define variables to make things easier.
+	          <br>
+	          For example if we write our definitions:
+	          <ul>
+	            <li>green_apples = 548522552;</li>
+	            <li>red_apples = 64166326;</li>
+	            <li>Given the Question how many apples do we have in total?</li>
+	            <li>We can now write this in a much easier way:</li>
+	            <li>Total apples = green_apples + red_apples.</li>
+	          </ul>
+	        </p>
+	      </div>
+	    </div>
+	    <div class="concept">
+	      <div class="concept-title" id="lesson-2-2">
+	        <b>Strings</b>
+	      </div>
+	      <div class="concept-description">
+	        <p>A String is a series of characters inside single quotes or double quotes. For example "I am a string" 'I am a string as well'.
+	        <br>When you open a string with a single quote you have to end it with a single quote and same rule applies when you open with a double quote.
+	        </p>
+	        <p>You could also use a variable with a string. For example:
+	          <br><em>hello = "howdy"</em>
+	          <br><em>print = hello</em>
+	          <br>When the python interpretor runs this we will get : <b>howdy</b>
+	        </p>
+	      </div>
+	    </div>
+	  </div>
+	  <br>
+	<br>
+	  <div class="lesson">
+	    <h2 id="lesson-3">
+	      Lesson 3: Input -> Function -> Output
+	    </h2>
+	    <div class="concept">
+	      <div class="concept-title" id="lesson-3-1">
+	        <b>What is a funtion?</b>
+	      </div>
+	      <div class="concept-description">
+	        <p>A function is something that takes input, performs somekind of operation and returns an output. For example, a function name <span class="code"> sum(a,b)</span> might take two inputs and produce the output of the sum of those two inputs.
+	        </p>
+	      </div>
+	    </div>
+	    <div class="concept">
+	      <div class="concept-title" id="lesson-3-2">
+	        <b>The difference between <em>making</em> and <em>using</em> a function.</b>
+	      </div>
+	      <p>Functions are started by introducing the function name and we do this by typing the code: <span class="code">def</span>. Next comes the function name followed by left paren then we intruduce how many variables we are going to use for example in the <span class="code"><b>def</b> sum(a,b):</span> we introduced our function then function name and then variables <b>a</b> and <b>b</b>.
+	      </p>
+	      <p>Now the second part of our function we define what we want the function to do. for example we can write. <span class="code">answer = a + b</span>. We have to write a return statement for the program to acutally give us something when we run the program. for example <span class="code">return a</span>.</p>
+	    </div>
+	    <div class ="concept">
+	      <div class="concept-title" id="lesson-3-3">
+	      <b>How do functions help programmers avoid repetition?</b>
+	      </div>
+	      <p>Functions are very essentials tools that programmers can create and reuse. Once you define a function once, you never have to define it again.</p>
+	    </div>
+	    <div class="concept">
+	      <div class="concept-title" id="lesson-3-4">
+	        <b>The result of a function that doesn't have a return statement</b>
+	      </div>
+	      <p>The <span class="code">return</span> keyword tells Python to output something. If you create a function without a return statement you will get nothing. for example:</p>
+	      <p><span class="code">
+	        def sum(a,b)
+	        <br>answer= a + b
+	        <br>total= sum(2,3)
+	        <br>print total
+	        <br>>>> None</span></p>
+	      </div>
+	    </div>
+	  </div>
+	  <br>
+	<br>
+	  <div class="lesson">
+	    <h2 id="lesson-4">
+	      Lesson 4: If and While loops
+	    </h2>
+	    <div class="concept">
+	      <div class="concept-title" id="lesson-4-1">
+	        <b>If Loops</b>
+	      </div>
+	      <div class="concept-description">
+	        <p>If loops are structured in this format:<br>
+	        <span class="code">if (operation):</span><br>
+	        <br><span class="code">(function)</span>
+	        The <b>if</b> loop is going to test <em>operation</em> and if the operation is true then it will run the function inside the loop. We can make the loop a little bit more complex by adding <br><span class="code">else:</span><br><br><span class="code">(function, could be another if loop)</span><br> by adding else this loop now tests the is operation, if true, it will run the function within the loop and if <b>not</b> true it will run what ever function comes after else that is written within the loop.</p>
+	        <p>For this reason we can have <b>nested loops</b>. Which are just loops within a loop.</p>
+	      </div>
+	    </div>
+	    <div class="concept">
+	      <div class="concept-title" id="lesson-4-2">
+	        <b>While Loops</b>
+	      </div>
+	      <div class="concept-description">
+	        <p>Now while loops are structured in a similar fashion. For example:<br><span class="code">while (operation):</span><br><span class="code">(function)</span><br> Now when this loop is executed it will test the operation in the while loop and while the statement holds true it will run the function inside of the loop. Only when the operation is false will it stop and move on to the next piece of code.
+	        </p>
+	      </div>
+	    </div>
+	    <div class ="concept">
+	      <div class="concept-title" id="lesson-4-3">
+	        <b>Debugging</b>
+	      </div>
+	      <div class="concept-description">
+	        <p>Debugging is very important! Bugs are going to happen they are inevitible, everyone has then so we should not waste that much time on trying to make everthing perfect before we run the code.
+	          <br>
+	          An important part of writing code is being able to find the bugs and have a systematic approach on finding the bugs. We should break down the code into simple parts that we can test so we can figure out exactly where the problem is.
+	        </p>
+	      </div>
+	    </div>
+	    <div class="concept">
+	      <div class="concept-title" id="lesson-4-4">
+	        <b>Lists & For Loops</b>
+	      </div>
+	      <div class="concept-description">
+	        <p>Unlike strings, which are compiled only of characters, Lists can be compiled of sequences of anything. Lists are structured in brackets: []. For example:<br><span class="code">(list_name)= [(expresion),(expresion)]</span><br>
+	        </p>
+	        <p>With lists we will encounter two concepts <b>mutation</b> and <b>aliasing</b>. Mutation is going to completely change the list mutating it into a new list, and Aliasing is the ability for a list to have two name and refer to the same list. For example we can have: <br><span class="code">fruit = [lemons, apples]</span><br><span class="code">groceries = fruit</span><br> Now when we write either groceries or fruit we will get the list [lemons, apples]
+	        </p>
+	        <p>For loops are a little different than the other two types of loops we mentioned previously. The For loop is structured like this:<br><span class="code"><b>for</b> (some_name) in (list):</span><br><span class="code">(block)</span><br> This will assign the element in the list to the name and evaluate the block and we'll do that in order going throught the list.
+	        </p>
+	      </div>
+	    </div>
+	    <div class="concept">
+	      <div class="concept-title" id="lesson-4-5">
+	        <b>How to solve problems</b>
+	      </div>
+	      <div class="concept-description">
+	        <p>So we have recommended steps to help solve any problem. Here is that list of steps:
+	          <ol>
+	            <li>Don't Panic!</li>
+	            <li>What are the Inputs?</li>
+	            <li>What are the outputs?</li>
+	            <li>Work through some of the examples by hand</li>
+	            <li>Simple mechanical solution</li>
+	            <li>Develop solution incrementally and test as we go</li>
+	          </ol>
+	        </p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+{% endblock %}
+</body>

@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <title>{% block title %}
+    Gabriel's Notes{% endblock %}
+  </title>
+</head>
+{% block body %}
+  <h1 id="section-1">
+    Stage 1: Introduction to Programming
+  </h1>
+  <div class="lesson">
+      <h2 id="lesson-1">
+        Lesson 1: The Basics
+      </h2>
+    <div class="concept">
+      <div class="concept-title" id="lesson-1-1">
+        <b>The Web</b>
+      </div>
+      <div class="concept-description">
+        <p>
+          The web consists of a bunch of computers communicating and connected together. When ever someone opens up browser like chrome, firefox, and internet explorer and go to a certain website like facebook. com they request this page through the HTTP protocol from a server so the browser can no display that page.
+        </p>
+      </div>
+    </div>
+    <div class="concept">
+      <div class="concept-title" id="lesson-1-2">
+        <b>HTML</b>
+      </div>
+      <div class="concept-description">
+        <p>
+          HTML stands for <em>Hypertext Markup Language</em>. There are many different content types that can be viewed through a browser but the majority is going to be HTML. HTML documents contain two types of information which is text and visual (how it looks).
+        </p>
+      </div>
+    </div>
+    <div class="concept">
+      <div class="concept-title" id="lesson-1-3">
+        <b>Tags and Elements</b>
+      </div>
+      <div class="concept-description">
+        <p>
+          HTML documents conisit of HTML <b>elements</b>. When we write HTML we tell the browsers the type of each element by using HTML <b>tags</b>.
+        </p>
+      </div>
+      <div class="concept-description">
+        <p>
+          An element is a group of tags, for example some elements are comprised of an opening tag, contents, and a closing tag. like <em>b</em> and <em>/b</em> are tags to make the contents between them bold.There are many different tags.
+        </p>
+      </div>
+      <div class="concept-description">
+        <li>
+          <b>"em"</b>- Italics
+        </li>
+        <li>
+          <b>"a"</b>- Anchor
+        </li>
+        <li>
+          <b>"p"</b>- Paragraph
+        </li>
+      </div>
+      <div class="concept-description">
+        <p>
+          Anchor's are different in that it contains an "<span class="italics">Attributes</span>".Tags can have multiple attributes. The Anchor tag in example can have <b>href</b> as the attribute name which is used to make links. Like this <a href="www.google.com">{{one}}</a>. This link will take you google when you click on the word "one".
+        </p>
+      </div>
+    </div>
+    <div class="concept">
+      <div class="concept-title" id="lesson-1-4">
+        <b>Images</b>
+      </div>
+      <div class="concept-description">
+        <p>
+          Images are a tag as well they pull an image from a server where the picture is stored and display them on the browser. When you create an Image tag you need to write the address to the picture after "<b>src</b>" which stands for source, we also need an alternate text to display when the image can not be pulled. Which comes after "<b>alt</b>". Because the image has no content it does not need a closing tag.
+        </p>
+      </div>
+    </div>
+    <div class="concept">
+      <div class="concept-title" id="lesson-1-5">
+        <b>Inline</b> vs <b>Block</b>
+      </div>
+      <div class="concept-description">
+        <p>
+          Inline would be text in line and we can use the "br" tag is like hitting enter in Word. And Block is things like the "p" which would create a paragraph and what this does is it creates a block of space around the text within the "p" tags.
+        </p>
+      </div>
+    </div>
+    <div class="concept">
+      <div class="concept-title" id="lesson-1-6">
+        <b>span / div</b>
+      </div>
+      <div class="concept-description">
+        <p>
+          These tags are both noraml tags they both contain text. The only difference it that "span" is inline and "div" is block. These are both used to adding styles to your documents.
+        </p>
+      </div>
+    </div>
+    <div class="concept">
+      <div class="concept-title" id="lesson-1-7">
+        <b>Computers are stupid</b>
+      </div>
+      <div class="concept-description">
+        <p>
+          Computers are stupid because we have to tell them exatcly the right format. They take everything literally. Which makes things complicated when someone makes a single error in code. Because the computer will not tell you what's wrong or where the error is.
+        </p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="lesson" id="lesson-2">
+    <h2>
+      Lesson 2: Creating Documents with HTML
+    </h2>
+    <div class="concept">
+      <div class="concept-title" id="lesson-2-1">
+        <b>The way of the Web</b>
+      </div>
+      <div class="concept-description">
+        <p>
+          Conceptual understanding of the way websites work. They work like a house, we have separate rooms walls here and bathroom there. CSS is like the color on the walls of your house and JAVA is the interactive parts.
+        </p>
+      </div>
+      <div class="concept-description">
+        <p>
+          The structure of a website is all shaped in squares or rectangular is shape.
+        </p>
+      </div>
+      <div class="concept-description">
+        <p>
+          The browser creates a tree like structure for the HTML. It Serves kind of like a outline of the whole webpage.
+        </p>
+      </div>
+    </div>
+    <div class="concept">
+      <div class="concept-title" id="lesson-2-2">
+        <b>CSS</b>
+      </div>
+      <div class="concept-description">
+        <p>
+          CSS stands for Cascading Style Sheets- style sheet language used for describing the look and formatting of a document written in a markup language.
+        </p>
+      </div>
+      <div class="concept-description">
+        <p>
+          CSS is used to add style to our webpage. Just like in the example of the house its like adding color to the walls. So we can add color or different font size or styles to our webpage.
+        </p>
+      </div>
+    </div>
+{% endblock %}
+</html>
+{% endblock %}

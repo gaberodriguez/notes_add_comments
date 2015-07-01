@@ -1,0 +1,33 @@
+{% extends "main.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <title>{% block title %}
+    Gabriel's Notes{% endblock %}
+  </title>
+</head>
+{% block body %}
+  <h1 id="section-1">
+    Introduction to Programming
+  </h1>
+  <div class="lesson">
+      <h2 id="lesson-1">
+        Lesson 1: The Basics
+      </h2>
+    <div class="concept">
+      <div class="concept-title" id="lesson-1-1">
+        <b>The Web</b>
+      </div>
+      <div class="concept-description">
+        <p>
+          The web consists of a bunch of computers communicating and connected together. When ever someone opens up browser like chrome, firefox, and internet explorer and go to a certain website like facebook. com they request this page through the HTTP protocol from a server so the browser can no display that page.
+        </p>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+</html>
+{% endblock %}
+

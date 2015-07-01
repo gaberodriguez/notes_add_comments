@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+
+<body>
+{% block content %}
+  <h1 id="section-4">
+      Stage 4: Allow Comments
+    </h1>
+    <div class="lesson">
+      <h2 id="lesson-1">
+        Introduction to Networks
+      </h2>
+      <div class="concept">
+        <div class="concept-title" id="lesson-1-1">
+          <b>Intro to Networks part-1</b>
+        </div>
+        <p>A <b>Network</b> is a group of entities that can communicate, even though they are not all directly connected. At least 3 entities that can communicate with each other without a direct connections to each others.
+        </p>
+        <p>There are somethings we need to make a network.
+          <ul>
+            <ol>Ways to encode and interpret messages</ol>
+            <ol>Ways to route messages</ol>
+            <ol>Rules for deciding who gets to use resources</ol>
+          </ul>
+        </p>
+        <p>There are two main ways to measure a newtwork. One way is  using Latency and the other way is to use Bandwidth. <b>Latency</b> is the time that is takes a message to get from the source to the destination. Which is a measure of time now most commonly measured in milliseconds. <b>Bandwidth</b> is the amount of information that can be transmitted per unit time. Usually measured in bits per second more commonly written as Mbps.
+        </p>
+        <p>A <b>Bit</b> is the smallest unit of information. One bit lets us decide between two choices hence 0 and 1 for "yes" and "no". Measuring a bandwidth we need to know how many bits we can send per second.
+        </p>
+        <p>A <b>Protocol</b> is a set of rules that people agree to, that tell you how two entities can talk to each other. For the web the protocol gives rules on how the client and the server communicate with each other. Client is the webbrowser that we are viewing and the server is the website we are at. The protocol says that we have to send a message in a particualr way. The protocol that we use on the web is HTTP("Hypertext Transfer Protocol") this sends the Get message to the client and then the client sends back what we wanted.
+        </p>
+      </div>
+      <div class="concept">
+        <div class="concept-title" id="lesson-1-2">
+          <b>Make the Internet Work for You</b>
+        </div>
+        <p>A <b>URL</b> stands for Uniform Resource Locator. An example URL: http://www.udacity.com/ . This consists of three parts. The Protocol wich is "http" the host which is "www.udacity.com" which is the domain name which is the description of the location of the page or file we want and the path "/" which allow
+        </p>
+        <p>Query parameters (GET parameters), an example:<br><br><span class="code">
+        https://example.com/foo?P=1</span><br><br> This <span class="code">?P=1</span> adds a Parameter whos name is P and value is 1. The format is "Name = value" we could add a new parameter by using ampersands "&". Parameters are added information the server gets like cache. A <b>Cache</b> is something that stores data so that you don't have to rectrieve it later. It can be used to make data requests faster.
+        </p>
+        <p><b>Fragments</b> are separated from the URL with a "#" and is generally used to reference a particular part of the page you are looking at. It is not sent to the server when you make a request, it purely exists in the browser. Fragments follow the query parameters, they come last.
+        </p>
+        <p><b>URL have ports.</b> When you make a request to a server, <span class="code">http://localhost:8000/</span> this is the host, the name of the machine or the location of the machine you are requesting. You need two things to make an internet connection which are the address of the machine with is represented by the host then the port with is ":8000" it is 80 by default but we can use a different port.
+        </p>
+        <p><b>HTTP</b> (HyperText Transfer Protocol). The request from our browser for any URl begins with a request line, it will look something like this: <br><br> <span class="code">GET /foo HTTP/1.1</span><br> there are three main parts for the request line. Method which in this case is "GET" which is the type of request we are making to the server. The Path is "/foo" which is the actual document we are requesting from the server. And the version which is "HTTP/__" 1.1 or 1.0.<br><br>When we make a request it is followed by Headers: Name: value.For example:<br><br>Host: www.example.com<br> User-Agent: chrome.
+        </p>
+        <p><b>HTTP Responses:</b> When we make a request to a server we also get a response. A basic HTTP response looks similar to the request. So the response to the request line is <em>HTTP/1.1 200 ok</em> it will always be the same version as the request and then we get the status code which in this case is <em>200</em> and then the reason phrase which is in english <em>ok</em>. Here are some of the most common status codes.<br>
+          <ul>
+            <ol>200 ok</ol>
+            <ol>302 Found</ol>
+            <ol>404 Not found</ol>
+            <ol>500 Server Error</ol>
+          </ul>The staus line for HTTP Responses, like the request have headers.
+        </p>
+        <p>A purpose of a <b>Server</b> is to respond fo HTTP requests. There are two main classification of types of responses the server will do which are Static and Dynamic. Static are pre-written file that the server just returns like an image. Dynamic are requests where the response is built on the fly by a program thats running. These programs are called Web Applications which is by definition a program that generates content.
+        </p>
+      </div>
+      <div class="concept">
+        <div class="concept-title" id="lesson-1-3">
+          <b>Forms</b>
+        </div>
+        <p>Forms are the checkboxes, textboxes, radio buttons that allow websites to get information from users. When we use the input tag that allows the user to type in some text. The user could hit enter to submit the text or we can add an input tag with a new attribute called <span class="code"> input type="submit"</span> this creates a submit button that now allows the user to submit the information they type in by clicking the button or hitting enter.
+        </p>
+        <p>We can make a radio button to where only one button can be selected by setting the name attribute on all the options to be the same. But this will not tell us which button was selected, this only tells us that a button was selected. To know which one was selected we will add another attribute to the input tag called <b>value</b> with this we can set the names of the buttons to be the same but the value be different so we know exactly which button was selected.
+        </p>
+        <p>So far we have three options to select but in the browser we see three buttons but the user does not know what the values are. We can change this by using the <b>Label</b> element so we can inform the user what they are selecting.
+        </p>
+        <p>We can create a dropdown box by using the <b>select</b> element then in that element we have <b>option</b> elements.
+        </p>
+        <p>There is a attribute called <b>action</b> and this controls where a form submits to.
+        </p>
+      </div>
+    </div>
+    <br>
+  <br>
+    <div class="lesson">
+      <h2 id="lesson-2">
+        Work Session 1
+      </h2>
+      <div class="concept">
+        <div class="concept-title" id="lesson-2-1">
+          <b>Modules & Dictionaries</b>
+        </div>
+        <p>The Modulus Operator: <b>%</b> what modulus does is it takes a number and maps it to the range based on the remainder when you divide that number.
+        </p>
+        <p>Dictionaries are another data structure, similar to a Python <span class="code">List</span>. like a list dictionaries are mutable, they are made using this format {'key': value}. We can find the value of the key by using d['key']. and this will give us the value of k in d.
+        </p>
+      </div>
+      <div class="concept">
+        <div class="concept-title" id="lesson-2-2">
+          <b>Working with the App Engine</b>
+        </div>
+        <p>There are two main requests we can make GET, and POST. There are some differences in the two.
+        </p>
+        <p>
+          <ul>GET
+            <ol>Parameters are in URL</ol>
+            <ol>Used for fetching documents</ol>
+            <ol>Because in URL there is a cap on the length</ol>
+            <ol>Generally ok to cache</ol>
+            <ol>Should not change the server</ol>
+          </ul>
+          <ul>POST
+            <ol>Parameters are in the body</ol>
+            <ol>Used to for updating data</ol>
+            <ol>No max length because it is in the body</ol>
+            <ol>Not okay to cache because data is always updating</ol>
+            <ol>Ok to change server</ol>
+          </ul>
+        </p>
+      </div>
+      <div class="concept">
+        <div class="concept-title" id="lesson-2-3">
+          <b>Validation</b>
+        </div>
+        <p><b>Validation</b> means verifying on the server side that what we receive is what we expected to receive.
+        </p>
+        <p><b>String substitution</b> is a neat feature that allows the user to write <span class="code">%s</span> then %<em>variable</em> and this will sub in what ever the variable is wheather it be a string or text, and it will take the place of <b>%s</b>. We can also use this to substitute multiple variables in this format: <span class="code">"text %s text %s" %(var1, var2)</span> this alows us to sub in two variables at a time, there can be more than just two variables.
+        </p>
+        <p>When we get inputs from the user inputing text through the browser when he enters the wrong value it reloads the page but doesn't save the info he already entered in that is correct. We can change that by using the input value <span class="code">&lt;input value="%s"&gt;</span> this will save the information that was entered previously with a defalt value.
+        </p>
+        <p><b>Escaping</b> is a really cool feature it allows us to make the input data safer by not letting whatever get inputed to mess with our HTML code. We can represent some the symbols that are used to write code with a safe piece of code specific to each symbol to where it will render the symbol in the browser but not in our code.
+        </p>
+        <p><b>Redirection</b> allows us to redirect the user to a get page that has a different url than the submit page so that they can link to it and refresh the page without re-submitting the form.
+        </p>
+      </div>
+      <div class="concept">
+        <div class="concept-title" id="lesson-2-4">
+          <b>HTML Templates</b>
+        </div>
+        <p><b>Hidden input</b>, with this we can use this type to add values that the user can't actually see.
+        </p>
+        <p><b>Templates</b>, a template library is a library to build complicated strings. It helps us to separate different types of code, it makes our code more readable, helps us to make our websites more secure, and it makes html that is easier to modify.
+        </p>
+        <p><b>Variable Substitution</b> which is indicated by double curly braces and prints what ever is in between the two sets of curly braces.
+        </p>
+        <p><b>Statement Syntax</b> we this we can write a statement to run by using the curly braces.
+        </p>
+        <p><b>Template Inheritance</b>, if we have web pages that include some of the same html maybe different content for example we can make a template for the things that are similar to minimize the code that has to be written.
+        </p>
+      </div>
+      <br>
+  <br>
+    <div class="lesson">
+      <h2 id="lesson-3">
+        Work Session 2
+      </h2>
+      <div class="concept">
+        <div class="concept-title" id="lesson-3-1">
+          <b>Databases</b>
+        </div>
+        <p><b>Databases</b> are how we store all the information we are getting from the users. Ther are different types of databases: <br>relational databases(SQL) which include MySQL, Oracle, and SQLite. These all use tables.
+        </p>
+        <p><b>Tables</b> tables have columns and rows to help us track different things like to see how many votes user get from submitting links.
+        </p>
+        <p>Downsides of querying data by hand is that it is error prone, it is a very tedious process, and is very slow when processing a lot of requests.
+        </p>
+        <p><b>SQL</b> (Structured Query Language) its a language for expressing queries. We ask questions to the database to get information. It was invented in the 1970s. We can write in this format: <span class="code" color="red">SELECT * From links WHERE id=5;</span>
+        </p>
+        <p><b>Joins</b> is a SQL statement where we scan two different tables to link them together.
+        </p>
+        <p><b>Indexes</b> increases the speed of queries becauase instead of just scaning the query to find the one that matches what we need, we use indexes to jump straight to where we desire. <b>Hashtables</b> are not sorted but the look ups are faster, <b>Trees</b> are sorted but lookups are slower.
+        </p>
+        <p><b>ACID</b> stands for:<br>
+          <ul>
+            <li><b>A</b>tomicity</li>- all parts of a transaction succeed or fail together
+            <li><b>C</b>onsistency</li>- the database will always be consistent
+            <li><b>I</b>solation</li>- no transaction can interfere with another's
+            <li><b>D</b>urability</li>- once the transaction is committed, it won't be lost.
+        </p>
+        <p>Google App Engine Datastore has tables and those tables have entities and entities do not have fixed columns, they all have an ID, and have parents/ancestors.
+        </p>
+      </div>
+    </div>
+{% endblock %}
+</body>

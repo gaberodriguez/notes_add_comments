@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+<body>
+{% block content %}
+	<h1 id="section-3">
+    Stage 3: Adding Video's to Webpage
+    </h1>
+    <div class="lesson">
+  		<h2 id="lesson-1">
+  		Program with objects
+  		</h2>
+  		<div class="concept">
+  			<div class="concept-title" id="lesson-1-0">
+  				<b>Using other people's code</b>
+  			</div>
+  			<p>We can use other people's code to effectively save time and effort, which will let us add powerful functionality to our code. Object-oriented programming (OOP) is a programming language model organized around objects rather than "actions" and data rather than logic.</p>
+  			<p>An <b>Object</b> is an instance of a class. An instance is an object of a class created at run-time. The terms object and instance are normally used synonymously.</p>
+  			<p>Once an object is identified, it is generalized as a <b>class</b> of objects which defines the kind of data it contains and any logic sequences that can manipulate it. Each distinct logic sequence is known as a method.</p>
+  			<p>A <b>Method</b> is a function, but it is a special kind of function which belongs to a class, in other words, it is defined in a class, and works on the instance and class data of this class. The special thing about Methods is that the object is passed as the first argument of the function. Methods can only be called through instances of the BaseClass or a DerivedClass with the BaseClass defined in the scope of the containing the derived class definition. For example:<br><br><span class="code">class DerivedClass(<b>BaseClass</b>):</span><br><br>The class name followed by a dot and the method name. like in the <b>inheritance</b> project we called <span class="code">miley_cyrus.show_info()</span> we could do this because we defined this method in the Parent class <span class="code">billy_cyrus</span>.</p>
+  		</div>
+  		<div class="concept">
+  			<div class="concept-title" id="lesson-1-1">
+  				<b>Use functions</b>
+  			</div>
+  			<p>We can start by thinking about what we want our program to do. For example, in one of our projects we wanted our program to run and then after 2 hours the program will run a video forcing the user take a break. To simplify this we can broke down this into two steps.
+  				<ol>
+  					<li>wait 2 hours.</li>
+  					<li>Open browser.</li>
+  				</ol>
+  				To do this we can create a program that opens a web browser using the <span class="code">webbrowser.open</span> and <span class="code">time.sleep</span> functions to do what we want to do.
+  			</p>
+  		</div>
+  		<div class="concept">
+  			<div class="concept-title" id="lesson-1-2">
+  				<b>Using classes</b>
+  			</div>
+  			<p>When we use a class like <span class="code">turtle.Turtle()</span> we automatically call the function <span class="code">__init__</span> that initializes some space for a new instance.
+  			</p>
+  			<p>So for the send text mini-project we had to use the Twilio package to write a program to send ourselves a text message. In this mini-project we have to import a folder from inside the folder Twilio called <span class="code"> Twilio.rest</span> to import the class <span class="code">TwilioRestClient</span> and we use this class in our code.
+  			</p>
+  			<p>Classes are like a blue print, so from the blue print we can create different objects or instances of that blue print.
+  			</p>
+  			<p>We know that the Python Standard library comes with different modules or folder like webbrowser, turtle, and time. When we want to use one of these modules we have to import it so that python can know that we are going to call functions or classes from those modules.
+  			</p>
+  			<p>Some functions like <span class="code">open</span> are built in so we don't have to import anything because it is readily availible because it is used very often.
+  			</p>
+  		</div>
+  		<div class="concept">
+  			<div class="concept-title" id="lesson-1-3">
+  				<b>Making classes</b>
+  			</div>
+  			<p>A class defines a data type, which contains variables, properties and methods. For example, we can make a class by bringing the function <span class="code">__init__</span> and listing what we want our class to capture. In this case we create a class <em>Movie</em> and we want it to remember:
+  				<ul>
+  					<li>title</li>
+  					<li>storyline</li>
+  					<li>poster_image</li>
+  					<li>trailer_youtube</li>
+  				</ul>So we create this class which functions as a blue print and we cant make different instances of this class like we made one of toy story and avatar.
+  			</p>
+  			<p>When we made the class Movie we made some <b>instance variables</b> so when we called the class <em>Movie</em> we need to give the variables: title, story line, poster image, and trailer.
+  			</p>
+  		</div>
+  		<div class="concept">
+  			<div class="concept-title" id="lesson-1-4">
+  				<b>Inheritance, Abstraction and how it relates</b>
+  			</div>
+  			<p><b>Inheritance</b> We use inheritance for resolving attribute references: if a requested attribute is not found in the DerivedClass, the search proceeds to look in the BaseClass. This rule is applied recursively if the base class itself is derived from some other class. For example we can create a class called Video's which will be the BaseClass then we can have two DerivedClasses the class movies, that we have already written, and then create a new class called Tv-Shows. Then the DerivedClasses will get some attributes from the BaseClass if not already defined within that instance.
+  			</p>
+  			<p><b>Abstraction</b> is the process of taking away or removing chracteristics from something in order to reduce it to a set of essential characteristics. Throught the process of abstraction, a programmer hides all but the relevant data about an object in order to reduce complexity and increse efficiency.
+  			</p>
+  			<p>In OOP we use classes to help us write code faster and more efficiently. We can relate this to the same code we have used already by building this website using HTML and CSS. For example we have classes in our HTML code called "concept" then in CSS we define what characteristics we want our class to have. This make things much easier because instead of defining what we want each paragraph or section to look like we can make a class then just put all of the sections we want to have the same characteristics.
+  			</p>
+  		</div>
+  	</div>
+{% endblock %}
+</body>
