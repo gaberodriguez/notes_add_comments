@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body style="background:transparent; color: black;">
+        {% for post in posts %}
+            <div class="dialogbox">
+                <div class="body">
+                    <span class="tip tip-left">
+                    </span>
+                    <div class="message">
+                        <span>Anonymous User wrote:
+                            <p>{{ post.content }}</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        <form action="/sign?wall_name={{  wall_name }}" method="post"><br><br>
+            <div><textarea name="content" rows="3" cols="60" class="comment_box"></textarea></div>
+            <div><input type="submit" value="Post Comment"></div><br><br>
+            <br>
+            <br>
+        </form>
+        <form style="color:white;">Wall:
+            <input value="{{ wall_name }}" name="wall_name" class="comment_box">
+            <input type="submit" value="Switch">
+        </form>
+    </body>
+</html>

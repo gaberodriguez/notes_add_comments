@@ -1,6 +1,54 @@
+html {
+	background: url(http://2.bp.blogspot.com/-qQUqrpgtSw8/Uql35rE09kI/AAAAAAAAbkg/sBukCiJkNRk/s1600/math-1080.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
 body {
-	background-color: white;
+	background: transparent;
 	margin: 0 auto -4em;
+}
+textarea.comment_box{
+	background-color: #ffffff;
+	opacity:0.4;
+}
+input.comment_box{
+	background-color: #ffffff;
+	opacity:0.4;
+}
+h1.h1{
+	background: transparent;
+	color: white;
+}
+h1.homepage-title{
+	background: transparent;
+	color: white;
+	font-size: 300%;
+}
+.dialogbox .body {
+  position: relative;
+  max-width: 300px;
+  height: auto;
+  margin: 20px 10px;
+  padding: 5px;
+  background-color: #DADADA;
+  border-radius: 3px;
+  border: 5px solid #ccc;
+}
+.tip {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  background: transparent;
+  border: 10px solid #ccc;
+}
+.tip-left {
+  top: 10px;
+  left: -25px;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
 }
 footer {
 	width: 100%;
@@ -25,13 +73,14 @@ h2 {
 	margin: 10px;
 }
 .lesson {
-	background-color: #294860;
+	background:transparent;
 	border-radius: 20px;
 	color: white;
 	padding: 10px;
 }
 .concept {
-	background-color: #DFEAF1;
+	background-color: #FFFFFF;
+	opacity:0.9;
 	padding: 8px;
 	margin: 10px;
 	border-radius: 4px;
@@ -41,7 +90,7 @@ h2 {
 	font-size: 20px;
 	margin: 8px;
 	text-align: center;
-	color: #294860;
+	color: black;
 }
 .italics {
 	font-style: italic;

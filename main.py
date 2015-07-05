@@ -9,24 +9,6 @@ from google.appengine.ext import ndb
 template_dir = os.path.join(os.path.dirname(__file__),'templates')
 jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir), autoescape = True)
 
-HTML_TEMPLATE = '''
-<!DOCTYPE html>
-<html>
-<body>
-    <form action="/sign?%s" method="post"><br><br>
-        <div><textarea name="content" rows="3" cols="60"></textarea></div>
-        <div><input type="submit" value="Post Comment"></div>
-        <br>
-        <br>
-    </form>
-    <form>Wall:
-        <input value="%s" name="wall_name">
-        <input type="submit" value="Switch">
-    </form>
-    %s
-</body>
-</html>
-'''
 
 DEFAULT_WALL = 'Public'
 
@@ -81,21 +63,13 @@ class MainPage(Handler):
 
         posts = posts_query.fetch()
 
-        posts_html = ''
-        for post in posts:
-            posts_html += '<div><h3>' + '</h3>wrote: <blockquote>' + cgi.escape(post.content) + '</blockquote\n'
-            posts_html += '</div>\n'
+        template_values = {
+            'posts' : posts,
+            'wall_name' : urllib.quote_plus(wall_name),
+        }
 
-        rendered_HTML = HTML_TEMPLATE + (posts_html)
-
-        sign_query_params = urllib.urlencode({'wall_name': wall_name})
-
-        rendered_HTML = HTML_TEMPLATE % (sign_query_params, cgi.escape(wall_name), posts_html)
-
-
-        self.response.out.write(rendered_HTML)
-
-
+        template = jinja_env.get_template('HTML_TEMPLATE.html')
+        self.response.write(template.render(template_values))
 
 
 class PostWall(Handler):
@@ -105,9 +79,17 @@ class PostWall(Handler):
 
         post.content = self.request.get('content')
 
-        post.put()
+        sign_query_params = {'wall_name': wall_name}
 
-        self.redirect('/?wall_name=' + wall_name)
+        if post.content.isspace():
+            self.render("redirect.html")
+        else:
+            post.put()
+            self.redirect('/?' + urllib.urlencode(sign_query_params))
+
+
+
+
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),

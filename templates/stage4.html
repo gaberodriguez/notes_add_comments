@@ -2,7 +2,7 @@
 
 <body>
 {% block content %}
-  <h1 id="section-4">
+  <h1 id="section-4" class="h1">
       Stage 4: Allow Comments
     </h1>
     <div class="lesson">
@@ -113,7 +113,7 @@
         <div class="concept-title" id="lesson-2-3">
           <b>Validation</b>
         </div>
-        <p><b>Validation</b> means verifying on the server side that what we receive is what we expected to receive.
+        <p><b>Validation</b> means verifying on the server side that what we receive is what we expected to receive. So for instance we can ask the user to input a number from 1 to 10, we can validate that the user inputs a number in that range by writing code to check the input make sure it is in fact a digit between 1 and 10 and if it is not, we output some kind of error message. This does not allow the user to give us bad content, so whatever they enter will not affect our code it will just give the user feedback that what they entered it invalid.
         </p>
         <p><b>String substitution</b> is a neat feature that allows the user to write <span class="code">%s</span> then %<em>variable</em> and this will sub in what ever the variable is wheather it be a string or text, and it will take the place of <b>%s</b>. We can also use this to substitute multiple variables in this format: <span class="code">"text %s text %s" %(var1, var2)</span> this alows us to sub in two variables at a time, there can be more than just two variables.
         </p>
@@ -128,6 +128,8 @@
         <div class="concept-title" id="lesson-2-4">
           <b>HTML Templates</b>
         </div>
+        <p>Templates are a very uselful because this allows us to take a file and display it on multiple pages. So we don't have to re-write this code everytime we want the same thing to be displayed on a different page, we can just link them together using templates. For example, let's say we have a header and a footer we want to display on all of our webpages, we can just link it to the template using blocks which helps us save time and re-use code instead of re-writing it.
+        </p>
         <p><b>Hidden input</b>, with this we can use this type to add values that the user can't actually see.
         </p>
         <p><b>Templates</b>, a template library is a library to build complicated strings. It helps us to separate different types of code, it makes our code more readable, helps us to make our websites more secure, and it makes html that is easier to modify.
