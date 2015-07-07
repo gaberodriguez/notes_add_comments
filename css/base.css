@@ -50,18 +50,6 @@ h1.homepage-title{
   border-left-color: transparent;
   border-bottom-color: transparent;
 }
-footer {
-	width: 100%;
-	height: 20px;
-	bottom: 0;
-	position:bottom;
-	left: 0;
-	margin: 0 auto;
-	background:#ffab62;
-	border-top:1px solid #ff4b02;
-	color:#333;
-	text-shadow:1px 1px 0 rgba(255,255,255,0.6);
-}
 h1 {
 	text-align: center;
 	color: #294860;

@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="css/base.css">
 </head>
 <header>
+	{% block head %}
 	<h1 style="margin: 0 font-size: 60px" class="homepage-title">Intro to Programming Notes</h1>
 	<div class="navigation-bar">
 		<ul>
@@ -14,10 +15,13 @@
 			<li><a href="stage4.html">Stage 4</a></li>
 		</ul>
 	</div>
+	{% endblock %}
 </header>
 <body>
 	{% block content %}
 	{% endblock %}
-<footer>back to <a href="/">home page</a></footer>
 </body>
+<footer>
+	back to <a href="/">home page</a>
+</footer>
 </html>

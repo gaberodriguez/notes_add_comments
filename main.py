@@ -1,6 +1,5 @@
 import os
 import urllib
-import cgi
 import jinja2
 import webapp2
 
@@ -68,9 +67,7 @@ class MainPage(Handler):
             'wall_name' : urllib.quote_plus(wall_name),
         }
 
-        template = jinja_env.get_template('HTML_TEMPLATE.html')
-        self.response.write(template.render(template_values))
-
+        self.render('HTML_TEMPLATE.html', **template_values)
 
 class PostWall(Handler):
     def post(self):
@@ -81,15 +78,11 @@ class PostWall(Handler):
 
         sign_query_params = {'wall_name': wall_name}
 
-        if post.content.isspace():
-            self.render("redirect.html")
-        else:
+        if post.content and not post.content.isspace():
             post.put()
             self.redirect('/?' + urllib.urlencode(sign_query_params))
-
-
-
-
+        else:
+            self.render("redirect.html")
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),
